@@ -1,6 +1,7 @@
 package pr2;
 
 import javax.swing.UIManager;
+import pr2.gui.NuevaGUI;
 
 import pr2.gui.VentanaCarga;
 
@@ -13,7 +14,7 @@ public class Main {
 	    } 
 	    catch (Exception e) {}
 		
-		new VentanaCarga();
+		new NuevaGUI();
 		
 		
 	}

@@ -27,7 +27,7 @@ import pr2.Str;
 import pr2.id3.ID3;
 import pr2.tree.Node;
 
-public class VentanaTabla {
+public class VentanaTabla{
 	
 	private JFrame ventana;
 	
