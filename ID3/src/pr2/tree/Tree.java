@@ -93,12 +93,12 @@ public class Tree {
         ArrayList<String> children = nodes.get(identifier).getChildren();
 
         if (depth == ROOT) {
-            salida.append("(" + nodes.get(identifier).getIdentifier() + ")" + "\n");
+            salida.append("[" + nodes.get(identifier).getIdentifier() + "]" + "\n");
         } else {
             String tabs = String.format("%0" + depth + "d", 0)
-            						.replace("0", " \u217C    ")
-            						.replaceFirst("\u217C", " "); // 4 spaces"
-            salida.append(tabs + " \u0370 (" +
+            						.replace("0", " \u22EE    ")
+            						.replaceFirst("\u22EE", " "); // 4 spaces"
+            salida.append(tabs + " \u21E2 (" +
             						nodes.get(identifier).getIdentifier() +
             						")" + "\n");
         }
