@@ -93,7 +93,7 @@ public class NuevaGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 try{ atributos = FileManager.loadAtributos(); 
-                if ( atributos != null && atributos != null) boton_empezar.setEnabled(true);
+                if ( atributos != null && ejemplos != null) boton_empezar.setEnabled(true);
                 }
                 
 		catch(Exception e){
@@ -111,7 +111,7 @@ public class NuevaGUI extends JFrame{
             @Override
             public void actionPerformed(ActionEvent arg0) {
                 try{ ejemplos = FileManager.loadEjemplos(); 
-                if ( atributos != null && atributos != null) boton_empezar.setEnabled(true);
+                if ( atributos != null && ejemplos != null) boton_empezar.setEnabled(true);
                 
                 }
 		catch(Exception e){

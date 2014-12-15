@@ -1,5 +1,6 @@
 package pr2.gui;
 
+import java.awt.Color;
 import javax.swing.JTable;
 import javax.swing.ListSelectionModel;
 import javax.swing.table.DefaultTableModel;
@@ -25,7 +26,7 @@ public class Tabla extends JTable {
 		setModel(model);
 		
 		setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-		
+
 		setVisible(true);
 		
 	}
