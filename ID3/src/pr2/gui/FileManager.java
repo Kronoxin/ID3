@@ -17,12 +17,14 @@ import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class FileManager {
+    
+    private static String path = "";
 	
 	public static String[] loadAtributos(){
 		
 		String[] rej = null;
 		
-		JFileChooser chooser = new JFileChooser();
+		JFileChooser chooser = new JFileChooser(path);
 		chooser.setDialogTitle("Abrir Archivo de Atributos");
 		FileNameExtensionFilter filter = new FileNameExtensionFilter(
 				"Archivos .txt", "txt");
@@ -31,6 +33,8 @@ public class FileManager {
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
 			
 			String name = chooser.getSelectedFile().getPath();
+                        
+                        path=name;
 					
 			FileInputStream file;
 			
@@ -68,7 +72,7 @@ public class FileManager {
 		ArrayList<String[]> rej = new ArrayList<String[]>();
 		String[][] tabla = null;
 		
-		JFileChooser chooser = new JFileChooser();
+		JFileChooser chooser = new JFileChooser(path);
 		chooser.setDialogTitle("Abrir Archivo de Ejemplos");
 		FileNameExtensionFilter filter = new FileNameExtensionFilter(
 				"Archivos .txt", "txt");
@@ -77,6 +81,8 @@ public class FileManager {
 		if (returnVal == JFileChooser.APPROVE_OPTION) {
 			
 			String name = chooser.getSelectedFile().getPath();
+                        
+                        path=name;
 					
 			FileInputStream file;
 			

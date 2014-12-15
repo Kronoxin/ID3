@@ -82,7 +82,7 @@ public class Tabla extends JTable {
 		
 		public boolean isCellEditable(int row, int column) {
 			
-			return true;
+			return false;
 				
 		}
 	}

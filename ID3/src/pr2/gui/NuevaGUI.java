@@ -92,7 +92,9 @@ public class NuevaGUI extends JFrame{
 
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                try{ atributos = FileManager.loadAtributos(); }
+                try{ atributos = FileManager.loadAtributos(); 
+                if ( atributos != null && atributos != null) boton_empezar.setEnabled(true);
+                }
                 
 		catch(Exception e){
 					
@@ -100,6 +102,7 @@ public class NuevaGUI extends JFrame{
 			Str.ERROR_CARGAR_ATR);
 					
 				}
+                
             }
         });
         
@@ -107,7 +110,10 @@ public class NuevaGUI extends JFrame{
 
             @Override
             public void actionPerformed(ActionEvent arg0) {
-                try{ ejemplos = FileManager.loadEjemplos(); }
+                try{ ejemplos = FileManager.loadEjemplos(); 
+                if ( atributos != null && atributos != null) boton_empezar.setEnabled(true);
+                
+                }
 		catch(Exception e){
 					
 		JOptionPane.showMessageDialog(NuevaGUI.this, 
@@ -117,7 +123,7 @@ public class NuevaGUI extends JFrame{
 				
             }
         });
-        
+        boton_empezar.setEnabled(false);
         boton_empezar.addActionListener(new ActionListener() {
 
             @Override
