@@ -35,6 +35,8 @@ public class NuevaGUI extends JFrame{
     JMenuItem item_CargaFicheroAtributos = new JMenuItem("Cargar fichero de atributos...");
     JMenuItem item_CargaFicheroEjemplo = new JMenuItem("Cargar fichero de ejemplo...");
     JMenu menu_ayuda = new JMenu("Ayuda");
+    JMenuItem item_Instrucciones = new JMenuItem("Instrucciones");
+    JMenuItem item_Nosotros = new JMenuItem("Sobre nosotros..");
     JButton boton_empezar = new JButton("Empezar");
     JSeparator sep_ver = new JSeparator(SwingConstants.VERTICAL);
     JSeparator sep_hor = new JSeparator();
@@ -66,12 +68,16 @@ public class NuevaGUI extends JFrame{
         menu_inicio.setBackground(Color.GRAY);
         item_CargaFicheroAtributos.setFont(fuente);
         item_CargaFicheroEjemplo.setFont(fuente);
+        item_Instrucciones.setFont(fuente);
+        item_Nosotros.setFont(fuente);
         menu_ayuda.setFont(fuente);
 
         barra_menu.add(menu_inicio);
     //    barra_menu.add(sep_ver);
 	barra_menu.add(menu_ayuda);
-		
+	
+        menu_ayuda.add(item_Instrucciones);
+        menu_ayuda.add(item_Nosotros);
 	menu_inicio.add(item_CargaFicheroAtributos);
 
 	menu_inicio.add(item_CargaFicheroEjemplo);
@@ -87,6 +93,22 @@ public class NuevaGUI extends JFrame{
       //  panel_menu.add(boton_empezar);
         
          //boton_empezar.setPreferredSize(new Dimension(90,40));
+        
+        item_Instrucciones.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new VentanaAyuda();
+            }
+        });
+        
+        item_Nosotros.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                new SobreNosotros();
+            }
+        });
         
         item_CargaFicheroAtributos.addActionListener(new ActionListener() {
 

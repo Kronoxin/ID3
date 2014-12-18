@@ -71,6 +71,7 @@ public class VentanaTabla2 extends JInternalFrame{
 			
 		});
 		*/
+     
 		JPanel panelPrin = new JPanel(new BorderLayout());
 		
 		tabla = new Tabla(ejemplos, atributos);
@@ -177,5 +178,6 @@ public class VentanaTabla2 extends JInternalFrame{
 		this.updateUI();
 		
 	}
+
 
 }

@@ -27,7 +27,7 @@ public class popup {
         Icon icono_ok;
        
         
-        icono_ok = new ImageIcon("Imagenes/iconOK.png");
+        icono_ok = new ImageIcon("src/images/iconOK.png");
 
       JOptionPane pane = new JOptionPane();
 
@@ -41,7 +41,7 @@ public class popup {
     public static void no(){
         
         Icon icono_no;
-        icono_no = new ImageIcon("Imagenes/iconNO.png");
+        icono_no = new ImageIcon("src/images/iconNO.png");
         JOptionPane pane = new JOptionPane();
 
       pane.showMessageDialog(null, "","Denegado",JOptionPane.ERROR_MESSAGE, icono_no);
