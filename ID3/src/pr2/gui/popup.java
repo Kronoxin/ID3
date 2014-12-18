@@ -6,8 +6,6 @@
 package pr2.gui;
 
 import java.awt.Color;
-import java.awt.Component;
-import java.awt.Graphics;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -28,12 +26,14 @@ public class popup {
        
         
         icono_ok = new ImageIcon("src/images/iconOK.png");
+        
 
       JOptionPane pane = new JOptionPane();
 
       pane.showMessageDialog(null, "","Verificado",JOptionPane.INFORMATION_MESSAGE, icono_ok);
       pane.setBackground(Color.GREEN);
       pane.setForeground(Color.GREEN);
+  
       
       
     }
