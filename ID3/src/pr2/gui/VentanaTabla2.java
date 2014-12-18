@@ -12,12 +12,15 @@ import java.awt.event.WindowListener;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.Vector;
+import javax.swing.Icon;
+import javax.swing.ImageIcon;
 
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JInternalFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JSeparator;
@@ -152,8 +155,28 @@ public class VentanaTabla2 extends JInternalFrame{
 				if (ID3.answer(v)) suerte.setBackground(new Color(0, 255, 0));
 				else suerte.setBackground(new Color(255, 0, 0));
                                 
-                                if (ID3.answer(v)) popup.si();
-                                else popup.no();
+                                if (ID3.answer(v)){
+                                    Icon icono_ok;
+       
+        
+                                        icono_ok = new ImageIcon(getClass().getResource("/img/iconOK.png"));
+
+
+                                      JOptionPane pane = new JOptionPane();
+
+                                      pane.showMessageDialog(null, "","Verificado",JOptionPane.INFORMATION_MESSAGE, icono_ok);
+                                      pane.setBackground(Color.GREEN);
+                                      pane.setForeground(Color.GREEN);
+                                }
+                                else {
+                                    Icon icono_no;
+                                        icono_no = new ImageIcon(getClass().getResource("img/iconNO.png"));
+                                        JOptionPane pane = new JOptionPane();
+
+                                      pane.showMessageDialog(null, "","Denegado",JOptionPane.ERROR_MESSAGE, icono_no);
+                                      pane.setBackground(Color.red);
+                                      pane.setForeground(Color.red);
+                                }
 			}
 		});
 		
