@@ -170,7 +170,7 @@ public class VentanaTabla2 extends JInternalFrame{
                                 }
                                 else {
                                     Icon icono_no;
-                                        icono_no = new ImageIcon(getClass().getResource("img/iconNO.png"));
+                                        icono_no = new ImageIcon(getClass().getResource("/img/iconNO.png"));
                                         JOptionPane pane = new JOptionPane();
 
                                       pane.showMessageDialog(null, "","Denegado",JOptionPane.ERROR_MESSAGE, icono_no);
